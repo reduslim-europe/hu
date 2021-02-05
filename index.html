@@ -1,0 +1,377 @@
+<html style="overflow: auto;">
+
+<head>
+
+<script src="js/jquery.min.js"></script>
+
+    <script>
+    function set_validator_errors(){
+        orderValidator.errorTitle = 'Kérjük javítsd ki a következő hibákat'; 
+
+        orderValidator.errorNameField = 'Név'; 
+        orderValidator.errorNameMess = 'Adja meg nevét'; 
+        
+        orderValidator.errorPhoneField = 'Telefonszám'; 
+        orderValidator.errorPhoneMess = 'Írja be a helyes telefonszámot'; 
+        
+        orderValidator.errorAddress = 'Írja be a helyes címet'; 
+        orderValidator.errorRequired = 'kötelező mező'; 
+        orderValidator.errorMaxLength = 'érvényes maximális {1} karakter'; 
+        orderValidator.errorMinLength = 'érvényes minimum {1} karakter'; 
+        orderValidator.errorEmailField = 'E-mail';
+        orderValidator.errorEmail = 'Érvénytelen e-mail megadva';
+        }
+    </script>
+    
+<script>
+
+
+
+    
+    setOffer: function (offerId) {
+        if (offerId == this._setOfferId) {
+            return ;
+        }
+        this._setOfferId = offerId;
+        if (offerId) {
+            var offer = app.offers[offerId];
+            var previousOffer = app.currentOffer;
+            app.currentOffer = offer;
+            var event = this.jq.Event("offerchange");
+            event.previousOffer = previousOffer;
+            event.currentOffer = app.currentOffer;
+            this.jq(document).trigger(event);
+            this.updatePage(offer);
+        } else {
+            $('input[name=country]').val('');
+        }
+    },
+    
+    updatePage: function(offer) {
+        $('x-newprice').html(offer.price);
+        $('x-oldprice').html(offer.price2);
+        $('x-currency').html(offer.currency.name);
+        $('input[name=offer], select[name=offer]').val(offer.id);
+        $('input[name=country]').val(offer.country.code);
+    },
+
+    blockForm: function() {
+        // Блокируем кнопки при отправке формы
+        $('input[type=submit]', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        $('button', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        app.incompleteOrder.lock = true;
+        clearTimeout(app.incompleteOrder.timer);
+    },
+
+    unblockForm: function() {
+        $('input[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        $('button[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        app.incompleteOrder.lock = false;
+        clearTimeout(app.incompleteOrder.timer);
+    }
+
+};
+
+
+</script><script src="js/form.validate.js"></script>
+<script src="js/form.incomplete.js"></script>
+<script src="js/main2.js"></script>
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>REDUSLIM</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1170">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/translater.js"></script>
+    <script type="text/javascript" src="js/timer.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="shortcut icon" href="favicon_reduslim.ico" type="image/x-icon">
+</head>
+
+<body>
+    <style>
+        .price_old {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="container">
+        <div class="block1">
+            <div class="wrapper">
+                <div class="top-block">
+                    <div class="item1 lt0">Biztonságos minden <br>korban</div>
+                    <div class="item2 lt1">REDUSLIM</div>
+                    <div class="item3 lt2">
+                        <script type="text/javascript">
+                            var d = new Date();
+                            var day = d.getDate();
+                            var month = d.getMonth() + 1;
+                            var year = d.getFullYear();
+                            document.write(year);
+                        </script>-ben 304.342 darabot értékesítettek</div>
+                    <div class="button-block">
+                        <a class="lt3" href="#order">Kapjon konzultáció</a>
+                    </div>
+                </div>
+                <div class="title lt4">A REDUSLIM. Kapszula 2 héten belül feloldja akár <span class="pink">10 kg </span>zsírt</div>
+                <div class="title2 lt5">REDUSLIM Hivatalos oldal
+                	
+                </div>
+                <div class="left-block">
+                    <div class="item lt6">Hatékonyan felosztja a ZSÍR az <br>REDUSLIM zöld tea kivonat köszönhetően</div>
+                    <div class="item lt7">Csökkenti a cukorbetegség, <br>magas vérnyomás, infarktus kialakulásának kockázatát</div>
+                    <div class="item lt8">Megakadájoza a <br>veszélyes az életre <br>belső szervek elhízást</div>
+                    <div class="bottom lt9">*Elnyomja az étvágyat</div>
+                    <div class="prod"><img alt="" src="images/product.png"></div>
+                </div>
+                <div class="right-block">
+                    <div class="title-form lt10">AKCIÓ! <span class="pink"><span class="price_main"><span class="price_main_value new_price_val"><x-newprice>11900</x-newprice></span><span class="price_main_currency new_price_cur"><x-currency>Ft</x-currency></span></span> <span class="price_old"><span class="price_main_value old_price_val"><x-oldprice>23800</x-oldprice></span>
+                        <span class="price_main_currency old_price_cur"><x-currency>Ft</x-currency></span>
+                        </span>
+                        </span>
+                    </div>
+                    <div class="desc-form lt11">Az akció végéig maradt:</div>
+                    <div class="timer-block" id="timer1">
+                        <div class="hours">00</div>
+                        <div class="minutes">40</div>
+                        <div class="seconds">27</div>
+                    </div>
+                    <form action="https://healthbestblog.space/cpatl/api.php" class="orderformcdn order_form" method="POST" id="order_form0">
+                          
+    <select name="offer" class="form-control country_chang" style="display: none;">
+        <option data-country-code="HU" selected="selected" value="13981">
+            Венгрия        </option>
+    </select>
+
+     
+                        <div class="line name-inp">
+                            <input name="name" placeholder="Név" type="text">
+                        </div>
+                        <div class="line phone-inp">
+                            <input name="phone" placeholder="Telefon" type="tel">
+                        </div>
+                       
+                        <div class="button-line" type="submit">
+                            <button></button>
+                        </div>
+                           <input type="hidden" name="stream_hid" value="N2QUQbl8">
+      <input type="hidden" name="offer_id" value="3031">
+
+      
+      <input type="hidden" name="country" value="HU"> 
+
+      <input type="hidden" name="sid1" value="alex">
+      <input type="hidden" name="sid2" value="alex2">
+      <input type="hidden" name="sid3" value="alex3">
+      <input type="hidden" name="redirect_url" value="https://reduslim-europe.github.io/hu/success/index.html">
+                    </form>
+                    <div class="left-text lt12">Maradt<br>akciós<br>termék:</div>
+                    <div class="right-text">
+                        <div class="big">9</div>
+                        <div class="small lt13">darab</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block2">
+            <div class="wrapper">
+                <div class="title lt14">Önnek <span class="red">EZ</span> ismerős?</div>
+                <div class="left-block">
+                    <div class="text lt15">Légszomjat tapasztalom<br>lépcsőn <br>járás közben </div>
+                    <div class="text text2 lt16">Erősen izzadok, <br>különösen nyáron</div>
+                    <div class="text lt17">A hangulat naponta többször <br>változik</div>
+                    <div class="text lt18">Éjszaka rosszul alszom, <br>és napközben álmos vagyok</div>
+                </div>
+                <div class="right-block">
+                    <div class="text lt19">Húzó f<br>ájdalmat érzem az ízületekben, <br>derékben</div>
+                    <div class="text text2 lt20">Nap végén nagyon fáradt, duzzadt lábak</div>
+                    <div class="text lt21">A nyomás <br>emelkedik <br>és a fejem fáj</div>
+                    <div class="text lt22">Több mint <br>38 éves vagyok</div>
+                </div>
+                <div class="line">
+                    <div class="text lt23">Ha <span class="red">IGEN-el </span>válaszoltál 1 vagy több kérdésre -
+                        <div class="text-bold">az elhízás kockázata és annak szörnyű következményei <br>nagyon magasak!</div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+
+
+        <div class="block5">
+            <div class="wrapper">
+                <div class="title lt36">Indítsa el<span class="green">a zsírégetést </span> most!</div>
+                <div class="item item1 lt37">Gyomor káros<br> diéták nélkül</div>
+                <div class="item item2 lt38">Szív gyilkoló <br>edzés nélkül</div>
+                <div class="item item3 lt39">Gyötrelmes<br> éhség nélkül</div>
+                <div class="bottom-block lt40">Használj olyan eszközt, <br>amelynek hatékonyságában az egész nemzet meg volt győződve!</div>
+            </div>
+        </div>
+        <div class="block7">
+            <div class="wrapper">
+                <div class="title lt41">Hogyan <br><span class="green">befolyásolja REDUSLIM az egészségét</span></div>
+                <div class="item1">
+                    <div class="block-text lt42"><b>REDUSLIM zöld tea kivonat tartalmaz - <br> a legerősebb antioxidánsok!</b><br><br>Mérgező anyagokat, salakokat, <br>méreganyagokat, apróra vágott zsírt nyernek, amelyeket <br>nem vonnak le önmagukból<br><br>Megakadályozza <br>a
+                        belső szervek elhízását.
+                    </div>
+                </div>
+                <div class="title2 lt43">Hogyan befolyásolja a <br><span class="pink" reduslim="" az="" alakj�t<="" span=""></span></div>
+                <div class="item2">
+                    <div class="block-text lt44"><b>Zöld tea kivonat<br>szívódik fel a vérbe, és perceken belül<br> biztonságosan feloszlattja a zsírt!</b><br><br>A csípő szűkebbé válik, a gyomor <br>megfeszül, a narancsbőr és a <br>túlsúly elmegy. </div>
+                </div>
+                
+            </div>
+        </div>
+
+   
+        <div class="white-block1"></div>
+        <div class="block10">
+            <div class="wrapper">
+                <div class="title lt59">Alkalmazás módja</div>
+                <div class="item1">
+                    <div class="text lt60">Naponta 2-szer</div>
+                </div>
+                <div class="bottom-block lt61">Óvakodjon a hamisítványoktól!</div>
+                <div class="sep-block"></div>
+                <div class="left-block">
+                    <div class="line1 lt62">A REDUSLIM <br>népszerűség<br> növekedésével</div>
+                    <div class="line2 lt63"><br>gyakoriak a<br> hamisítások</div>
+                    <div class="line3 lt64"><br>hulladékárakkal.</div>
+                    <div class="prod"><img alt="" src="images/product3.png"></div>
+                </div>
+                <div class="right-block">
+                    <div class="line1 lt65">Csak itt <br>tudsz vásárolni <br>eredeti terméket</div>
+                    <div class="line2 lt66">különleges áron</div>
+                    <form action="https://healthbestblog.space/cpatl/api.php" class="orderformcdn order_form" method="POST" id="order_form1">
+                          
+    <select name="offer" class="form-control country_chang" style="display: none;">
+        <option data-country-code="HU" selected="selected" value="13981">
+            Венгрия        </option>
+    </select>
+
+     
+                        <div class="line name-inp">
+                            <input name="name" placeholder="Név" type="text">
+                        </div>
+                        <div class="line phone-inp">
+                            <input name="phone" placeholder="Telefon" type="tel">
+                        </div>
+                       
+                        <div class="button-line" type="submit">
+                            <button></button>
+                        </div>
+                              <input type="hidden" name="stream_hid" value="N2QUQbl8">
+      <input type="hidden" name="offer_id" value="3031">
+
+      
+      <input type="hidden" name="country" value="HU"> 
+
+      <input type="hidden" name="sid1" value="alex">
+      <input type="hidden" name="sid2" value="alex2">
+      <input type="hidden" name="sid3" value="alex3">
+      <input type="hidden" name="redirect_url" value="https://reduslim-europe.github.io/hu/success/index.html">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="block11">
+            <div class="wrapper">
+                <div class="title lt68">Hogyan működünk</div>
+                <div class="item">
+                    <div class="img-block item1"><img alt="" src="images/icon8.png"></div>
+                    <div class="img-block-icon"><img alt="" src="images/icon5.png"></div>
+                    <div class="img-block"><img alt="" src="images/icon7.png"></div>
+                    <div class="img-block-icon"><img alt="" src="images/icon5.png"></div>
+                    <div class="img-block"><img alt="" src="images/icon6.png"></div>
+                </div>
+                <div class="text lt69">Egy <br>azonnali megrendelést <br>rendelhet egy egyedi <br>áron <span class="price_main"><span class="price_main_value new_price_val"><x-newprice>11900</x-newprice></span><span class="price_main_currency new_price_cur"><x-currency>Ft</x-currency></span></span>!</div>
+                <div class="text lt70">Várja meg az <br>operátor visszahívását a részletek <br>tisztázására</div>
+                <div class="text lt71">Kockázat nélkül!<br>Vedd át a csomagot, <br>és fizess <br>postán</div>
+                <div class="title lt72">Megrendeléseket fogadunk el egész <br><span class="pink">Európában</span></div>
+            </div>
+        </div>
+        <div class="block12">
+            <div class="wrapper">
+                <div class="title lt4">A REDUSLIM. Kapszula 2 héten belül feloldja akár <span class="pink">10 kg </span>zsírt</div>
+                <div class="title2 lt5">Mentse magát az elhízástól és csökkenti a szívroham, a cukorbetegség és a magas vérnyomás kockázatát 89% -kal</div>
+                <div class="left-block">
+                    <div class="item lt6">Hatékonyan felosztja a ZSÍR az <br>REDUSLIM alfa-gyümölcssavaknak köszönhetően</div>
+                    <div class="item lt7">Csökkenti a cukorbetegség, <br>magas vérnyomás, infarktus kialakulásának kockázatát</div>
+                    <div class="item lt8">Megakadájoza a <br>veszélyes az életre <br>belső szervek elhízást</div>
+                    <div class="bottom lt9">*Elnyomja az étvágyat</div>
+                    <div class="prod"><img alt="" src="images/product.png"></div>
+                </div>
+                <div class="right-block" id="order">
+                    <div class="title-form lt10">AKCIÓ! <span class="pink"><span class="price_main"><span class="price_main_value new_price_val"><x-newprice>11900</x-newprice></span><span class="price_main_currency new_price_cur"><x-currency>Ft</x-currency></span></span> <span class="price_old"><span class="price_main_value old_price_val"><x-oldprice>23800</x-oldprice></span>
+                        <span class="price_main_currency old_price_cur"><x-currency>Ft</x-currency></span>
+                        </span>
+                        </span>
+                    </div>
+                    <div class="desc-form lt11">Az akció végéig maradt:</div>
+                    <div class="timer-block" id="timer2">
+                        <div class="hours">00</div>
+                        <div class="minutes">40</div>
+                        <div class="seconds">27</div>
+                    </div>
+                    <form action="https://healthbestblog.space/cpatl/api.php" class="orderformcdn order_form" method="POST" id="order_form2">
+                           
+    <select name="offer" class="form-control country_chang" style="display: none;">
+        <option data-country-code="HU" selected="selected" value="13981">
+            Венгрия        </option>
+    </select>
+
+     
+                        <div class="line name-inp">
+                            <input name="name" placeholder="Név" type="text">
+                        </div>
+                        <div class="line phone-inp">
+                            <input name="phone" placeholder="Telefon" type="tel">
+                        </div>
+                       
+                        <div class="button-line" type="submit">
+                            <button></button>
+                        </div>
+                              <input type="hidden" name="stream_hid" value="N2QUQbl8">
+      <input type="hidden" name="offer_id" value="3031">
+
+      
+      <input type="hidden" name="country" value="HU"> 
+
+      <input type="hidden" name="sid1" value="alex">
+      <input type="hidden" name="sid2" value="alex2">
+      <input type="hidden" name="sid3" value="alex3">
+      <input type="hidden" name="redirect_url" value="https://reduslim-europe.github.io/hu/success/index.html">
+                    </form>
+                    <div class="left-text lt12">Maradt<br>akciós<br>termék:</div>
+                    <div class="right-text">
+                        <div class="big">9</div>
+                        <div class="small lt13">darab</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+<center style="margin: 30px auto"><p>OOO "OSTROV PRODAZH" OGRN: 1197746695530 VAT: 7708365555</p>
+<p>129090, Moscow, pereulok Zhivarev, house 8, stroenie 3, flat 16 email: ostrov.prodazh@mail.com Skype: ostrov.prodazh@mail.com</p> 
+
+
+    
+            <p class="conf-link doclinks">
+        <a class="nav-link" href="" onclick="window.open('/policy_en.php'); return false;">Privacy Policy</a>
+          |
+        <a class="nav-link" href="" onclick="window.open('/terms_en.php'); return false;">Terms & Conditions</a>
+      </p>
+      
+    
+</center>
+</body>
+
+</html>
