@@ -6,20 +6,20 @@
 
     <script>
     function set_validator_errors(){
-        orderValidator.errorTitle = 'Kérjük javítsd ki a következő hibákat'; 
+        orderValidator.errorTitle = 'KÃ©rjÃ¼k javÃ­tsd ki a kÃ¶vetkezÅ‘ hibÃ¡kat'; 
 
-        orderValidator.errorNameField = 'Név'; 
-        orderValidator.errorNameMess = 'Adja meg nevét'; 
+        orderValidator.errorNameField = 'NÃ©v'; 
+        orderValidator.errorNameMess = 'Adja meg nevÃ©t'; 
         
-        orderValidator.errorPhoneField = 'Telefonszám'; 
-        orderValidator.errorPhoneMess = 'Írja be a helyes telefonszámot'; 
+        orderValidator.errorPhoneField = 'TelefonszÃ¡m'; 
+        orderValidator.errorPhoneMess = 'Ãrja be a helyes telefonszÃ¡mot'; 
         
-        orderValidator.errorAddress = 'Írja be a helyes címet'; 
-        orderValidator.errorRequired = 'kötelező mező'; 
-        orderValidator.errorMaxLength = 'érvényes maximális {1} karakter'; 
-        orderValidator.errorMinLength = 'érvényes minimum {1} karakter'; 
+        orderValidator.errorAddress = 'Ãrja be a helyes cÃ­met'; 
+        orderValidator.errorRequired = 'kÃ¶telezÅ‘ mezÅ‘'; 
+        orderValidator.errorMaxLength = 'Ã©rvÃ©nyes maximÃ¡lis {1} karakter'; 
+        orderValidator.errorMinLength = 'Ã©rvÃ©nyes minimum {1} karakter'; 
         orderValidator.errorEmailField = 'E-mail';
-        orderValidator.errorEmail = 'Érvénytelen e-mail megadva';
+        orderValidator.errorEmail = 'Ã‰rvÃ©nytelen e-mail megadva';
         }
     </script>
     
@@ -56,7 +56,7 @@
     },
 
     blockForm: function() {
-        // Блокируем кнопки при отправке формы
+        // Ð‘Ð»Ð¾ÐºÐ¸Ñ€ÑƒÐµÐ¼ ÐºÐ½Ð¾Ð¿ÐºÐ¸ Ð¿Ñ€Ð¸ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²ÐºÐµ Ñ„Ð¾Ñ€Ð¼Ñ‹
         $('input[type=submit]', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
         $('button', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
         app.incompleteOrder.lock = true;
@@ -104,7 +104,7 @@
         <div class="block1">
             <div class="wrapper">
                 <div class="top-block">
-                    <div class="item1 lt0">Biztonságos minden <br>korban</div>
+                    <div class="item1 lt0">BiztonsÃ¡gos minden <br>korban</div>
                     <div class="item2 lt1">REDUSLIM</div>
                     <div class="item3 lt2">
                         <script type="text/javascript">
@@ -113,29 +113,29 @@
                             var month = d.getMonth() + 1;
                             var year = d.getFullYear();
                             document.write(year);
-                        </script>-ben 304.342 darabot értékesítettek</div>
+                        </script>-ben 304.342 darabot Ã©rtÃ©kesÃ­tettek</div>
                     <div class="button-block">
-                        <a class="lt3" href="#order">Kapjon konzultáció</a>
+                        <a class="lt3" href="#order">Kapjon konzultÃ¡ciÃ³</a>
                     </div>
                 </div>
-                <div class="title lt4">A REDUSLIM. Kapszula 2 héten belül feloldja akár <span class="pink">10 kg </span>zsírt</div>
+                <div class="title lt4">A REDUSLIM. Kapszula 2 hÃ©ten belÃ¼l feloldja akÃ¡r <span class="pink">10 kg </span>zsÃ­rt</div>
                 <div class="title2 lt5">REDUSLIM Hivatalos oldal
                 	
                 </div>
                 <div class="left-block">
-                    <div class="item lt6">Hatékonyan felosztja a ZSÍR az <br>REDUSLIM zöld tea kivonat köszönhetően</div>
-                    <div class="item lt7">Csökkenti a cukorbetegség, <br>magas vérnyomás, infarktus kialakulásának kockázatát</div>
-                    <div class="item lt8">Megakadájoza a <br>veszélyes az életre <br>belső szervek elhízást</div>
-                    <div class="bottom lt9">*Elnyomja az étvágyat</div>
+                    <div class="item lt6">HatÃ©konyan felosztja a ZSÃR az <br>REDUSLIM zÃ¶ld tea kivonat kÃ¶szÃ¶nhetÅ‘en</div>
+                    <div class="item lt7">CsÃ¶kkenti a cukorbetegsÃ©g, <br>magas vÃ©rnyomÃ¡s, infarktus kialakulÃ¡sÃ¡nak kockÃ¡zatÃ¡t</div>
+                    <div class="item lt8">MegakadÃ¡joza a <br>veszÃ©lyes az Ã©letre <br>belsÅ‘ szervek elhÃ­zÃ¡st</div>
+                    <div class="bottom lt9">*Elnyomja az Ã©tvÃ¡gyat</div>
                     <div class="prod"><img alt="" src="images/product.png"></div>
                 </div>
                 <div class="right-block">
-                    <div class="title-form lt10">AKCIÓ! <span class="pink"><span class="price_main"><span class="price_main_value new_price_val"><x-newprice>11900</x-newprice></span><span class="price_main_currency new_price_cur"><x-currency>Ft</x-currency></span></span> <span class="price_old"><span class="price_main_value old_price_val"><x-oldprice>23800</x-oldprice></span>
+                    <div class="title-form lt10">AKCIÃ“! <span class="pink"><span class="price_main"><span class="price_main_value new_price_val"><x-newprice>11900</x-newprice></span><span class="price_main_currency new_price_cur"><x-currency>Ft</x-currency></span></span> <span class="price_old"><span class="price_main_value old_price_val"><x-oldprice>23800</x-oldprice></span>
                         <span class="price_main_currency old_price_cur"><x-currency>Ft</x-currency></span>
                         </span>
                         </span>
                     </div>
-                    <div class="desc-form lt11">Az akció végéig maradt:</div>
+                    <div class="desc-form lt11">Az akciÃ³ vÃ©gÃ©ig maradt:</div>
                     <div class="timer-block" id="timer1">
                         <div class="hours">00</div>
                         <div class="minutes">40</div>
@@ -145,12 +145,12 @@
                           
     <select name="offer" class="form-control country_chang" style="display: none;">
         <option data-country-code="HU" selected="selected" value="13981">
-            Венгрия        </option>
+            Ð’ÐµÐ½Ð³Ñ€Ð¸Ñ        </option>
     </select>
 
      
                         <div class="line name-inp">
-                            <input name="name" placeholder="Név" type="text">
+                            <input name="name" placeholder="NÃ©v" type="text">
                         </div>
                         <div class="line phone-inp">
                             <input name="phone" placeholder="Telefon" type="tel">
@@ -168,9 +168,9 @@
       <input type="hidden" name="sid1" value="alex">
       <input type="hidden" name="sid2" value="alex2">
       <input type="hidden" name="sid3" value="alex3">
-      <input type="hidden" name="redirect_url" value="https://amazinghealth.github.io/germitox-ita/success/index.html">
+      <input type="hidden" name="redirect_url" value="https://reduslim-europe.github.io/hu/success/index.html">
                     </form>
-                    <div class="left-text lt12">Maradt<br>akciós<br>termék:</div>
+                    <div class="left-text lt12">Maradt<br>akciÃ³s<br>termÃ©k:</div>
                     <div class="right-text">
                         <div class="big">9</div>
                         <div class="small lt13">darab</div>
@@ -180,22 +180,22 @@
         </div>
         <div class="block2">
             <div class="wrapper">
-                <div class="title lt14">Önnek <span class="red">EZ</span> ismerős?</div>
+                <div class="title lt14">Ã–nnek <span class="red">EZ</span> ismerÅ‘s?</div>
                 <div class="left-block">
-                    <div class="text lt15">Légszomjat tapasztalom<br>lépcsőn <br>járás közben </div>
-                    <div class="text text2 lt16">Erősen izzadok, <br>különösen nyáron</div>
-                    <div class="text lt17">A hangulat naponta többször <br>változik</div>
-                    <div class="text lt18">Éjszaka rosszul alszom, <br>és napközben álmos vagyok</div>
+                    <div class="text lt15">LÃ©gszomjat tapasztalom<br>lÃ©pcsÅ‘n <br>jÃ¡rÃ¡s kÃ¶zben </div>
+                    <div class="text text2 lt16">ErÅ‘sen izzadok, <br>kÃ¼lÃ¶nÃ¶sen nyÃ¡ron</div>
+                    <div class="text lt17">A hangulat naponta tÃ¶bbszÃ¶r <br>vÃ¡ltozik</div>
+                    <div class="text lt18">Ã‰jszaka rosszul alszom, <br>Ã©s napkÃ¶zben Ã¡lmos vagyok</div>
                 </div>
                 <div class="right-block">
-                    <div class="text lt19">Húzó f<br>ájdalmat érzem az ízületekben, <br>derékben</div>
-                    <div class="text text2 lt20">Nap végén nagyon fáradt, duzzadt lábak</div>
-                    <div class="text lt21">A nyomás <br>emelkedik <br>és a fejem fáj</div>
-                    <div class="text lt22">Több mint <br>38 éves vagyok</div>
+                    <div class="text lt19">HÃºzÃ³ f<br>Ã¡jdalmat Ã©rzem az Ã­zÃ¼letekben, <br>derÃ©kben</div>
+                    <div class="text text2 lt20">Nap vÃ©gÃ©n nagyon fÃ¡radt, duzzadt lÃ¡bak</div>
+                    <div class="text lt21">A nyomÃ¡s <br>emelkedik <br>Ã©s a fejem fÃ¡j</div>
+                    <div class="text lt22">TÃ¶bb mint <br>38 Ã©ves vagyok</div>
                 </div>
                 <div class="line">
-                    <div class="text lt23">Ha <span class="red">IGEN-el </span>válaszoltál 1 vagy több kérdésre -
-                        <div class="text-bold">az elhízás kockázata és annak szörnyű következményei <br>nagyon magasak!</div>
+                    <div class="text lt23">Ha <span class="red">IGEN-el </span>vÃ¡laszoltÃ¡l 1 vagy tÃ¶bb kÃ©rdÃ©sre -
+                        <div class="text-bold">az elhÃ­zÃ¡s kockÃ¡zata Ã©s annak szÃ¶rnyÅ± kÃ¶vetkezmÃ©nyei <br>nagyon magasak!</div>
                     </div>
                 </div>
               
@@ -205,24 +205,24 @@
 
         <div class="block5">
             <div class="wrapper">
-                <div class="title lt36">Indítsa el<span class="green">a zsírégetést </span> most!</div>
-                <div class="item item1 lt37">Gyomor káros<br> diéták nélkül</div>
-                <div class="item item2 lt38">Szív gyilkoló <br>edzés nélkül</div>
-                <div class="item item3 lt39">Gyötrelmes<br> éhség nélkül</div>
-                <div class="bottom-block lt40">Használj olyan eszközt, <br>amelynek hatékonyságában az egész nemzet meg volt győződve!</div>
+                <div class="title lt36">IndÃ­tsa el<span class="green">a zsÃ­rÃ©getÃ©st </span> most!</div>
+                <div class="item item1 lt37">Gyomor kÃ¡ros<br> diÃ©tÃ¡k nÃ©lkÃ¼l</div>
+                <div class="item item2 lt38">SzÃ­v gyilkolÃ³ <br>edzÃ©s nÃ©lkÃ¼l</div>
+                <div class="item item3 lt39">GyÃ¶trelmes<br> Ã©hsÃ©g nÃ©lkÃ¼l</div>
+                <div class="bottom-block lt40">HasznÃ¡lj olyan eszkÃ¶zt, <br>amelynek hatÃ©konysÃ¡gÃ¡ban az egÃ©sz nemzet meg volt gyÅ‘zÅ‘dve!</div>
             </div>
         </div>
         <div class="block7">
             <div class="wrapper">
-                <div class="title lt41">Hogyan <br><span class="green">befolyásolja REDUSLIM az egészségét</span></div>
+                <div class="title lt41">Hogyan <br><span class="green">befolyÃ¡solja REDUSLIM az egÃ©szsÃ©gÃ©t</span></div>
                 <div class="item1">
-                    <div class="block-text lt42"><b>REDUSLIM zöld tea kivonat tartalmaz - <br> a legerősebb antioxidánsok!</b><br><br>Mérgező anyagokat, salakokat, <br>méreganyagokat, apróra vágott zsírt nyernek, amelyeket <br>nem vonnak le önmagukból<br><br>Megakadályozza <br>a
-                        belső szervek elhízását.
+                    <div class="block-text lt42"><b>REDUSLIM zÃ¶ld tea kivonat tartalmaz - <br> a legerÅ‘sebb antioxidÃ¡nsok!</b><br><br>MÃ©rgezÅ‘ anyagokat, salakokat, <br>mÃ©reganyagokat, aprÃ³ra vÃ¡gott zsÃ­rt nyernek, amelyeket <br>nem vonnak le Ã¶nmagukbÃ³l<br><br>MegakadÃ¡lyozza <br>a
+                        belsÅ‘ szervek elhÃ­zÃ¡sÃ¡t.
                     </div>
                 </div>
-                <div class="title2 lt43">Hogyan befolyásolja a <br><span class="pink" reduslim="" az="" alakj�t<="" span=""></span></div>
+                <div class="title2 lt43">Hogyan befolyÃ¡solja a <br><span class="pink" reduslim="" az="" alakjã¡t<="" span=""></span></div>
                 <div class="item2">
-                    <div class="block-text lt44"><b>Zöld tea kivonat<br>szívódik fel a vérbe, és perceken belül<br> biztonságosan feloszlattja a zsírt!</b><br><br>A csípő szűkebbé válik, a gyomor <br>megfeszül, a narancsbőr és a <br>túlsúly elmegy. </div>
+                    <div class="block-text lt44"><b>ZÃ¶ld tea kivonat<br>szÃ­vÃ³dik fel a vÃ©rbe, Ã©s perceken belÃ¼l<br> biztonsÃ¡gosan feloszlattja a zsÃ­rt!</b><br><br>A csÃ­pÅ‘ szÅ±kebbÃ© vÃ¡lik, a gyomor <br>megfeszÃ¼l, a narancsbÅ‘r Ã©s a <br>tÃºlsÃºly elmegy. </div>
                 </div>
                 
             </div>
@@ -232,31 +232,31 @@
         <div class="white-block1"></div>
         <div class="block10">
             <div class="wrapper">
-                <div class="title lt59">Alkalmazás módja</div>
+                <div class="title lt59">AlkalmazÃ¡s mÃ³dja</div>
                 <div class="item1">
                     <div class="text lt60">Naponta 2-szer</div>
                 </div>
-                <div class="bottom-block lt61">Óvakodjon a hamisítványoktól!</div>
+                <div class="bottom-block lt61">Ã“vakodjon a hamisÃ­tvÃ¡nyoktÃ³l!</div>
                 <div class="sep-block"></div>
                 <div class="left-block">
-                    <div class="line1 lt62">A REDUSLIM <br>népszerűség<br> növekedésével</div>
-                    <div class="line2 lt63"><br>gyakoriak a<br> hamisítások</div>
-                    <div class="line3 lt64"><br>hulladékárakkal.</div>
+                    <div class="line1 lt62">A REDUSLIM <br>nÃ©pszerÅ±sÃ©g<br> nÃ¶vekedÃ©sÃ©vel</div>
+                    <div class="line2 lt63"><br>gyakoriak a<br> hamisÃ­tÃ¡sok</div>
+                    <div class="line3 lt64"><br>hulladÃ©kÃ¡rakkal.</div>
                     <div class="prod"><img alt="" src="images/product3.png"></div>
                 </div>
                 <div class="right-block">
-                    <div class="line1 lt65">Csak itt <br>tudsz vásárolni <br>eredeti terméket</div>
-                    <div class="line2 lt66">különleges áron</div>
+                    <div class="line1 lt65">Csak itt <br>tudsz vÃ¡sÃ¡rolni <br>eredeti termÃ©ket</div>
+                    <div class="line2 lt66">kÃ¼lÃ¶nleges Ã¡ron</div>
                     <form action="https://healthbestblog.space/cpatl/api.php" class="orderformcdn order_form" method="POST" id="order_form1">
                           
     <select name="offer" class="form-control country_chang" style="display: none;">
         <option data-country-code="HU" selected="selected" value="13981">
-            Венгрия        </option>
+            Ð’ÐµÐ½Ð³Ñ€Ð¸Ñ        </option>
     </select>
 
      
                         <div class="line name-inp">
-                            <input name="name" placeholder="Név" type="text">
+                            <input name="name" placeholder="NÃ©v" type="text">
                         </div>
                         <div class="line phone-inp">
                             <input name="phone" placeholder="Telefon" type="tel">
@@ -274,14 +274,14 @@
       <input type="hidden" name="sid1" value="alex">
       <input type="hidden" name="sid2" value="alex2">
       <input type="hidden" name="sid3" value="alex3">
-      <input type="hidden" name="redirect_url" value="https://amazinghealth.github.io/germitox-ita/success/index.html">
+      <input type="hidden" name="redirect_url" value="https://reduslim-europe.github.io/hu/success/index.html">
                     </form>
                 </div>
             </div>
         </div>
         <div class="block11">
             <div class="wrapper">
-                <div class="title lt68">Hogyan működünk</div>
+                <div class="title lt68">Hogyan mÅ±kÃ¶dÃ¼nk</div>
                 <div class="item">
                     <div class="img-block item1"><img alt="" src="images/icon8.png"></div>
                     <div class="img-block-icon"><img alt="" src="images/icon5.png"></div>
@@ -289,30 +289,30 @@
                     <div class="img-block-icon"><img alt="" src="images/icon5.png"></div>
                     <div class="img-block"><img alt="" src="images/icon6.png"></div>
                 </div>
-                <div class="text lt69">Egy <br>azonnali megrendelést <br>rendelhet egy egyedi <br>áron <span class="price_main"><span class="price_main_value new_price_val"><x-newprice>11900</x-newprice></span><span class="price_main_currency new_price_cur"><x-currency>Ft</x-currency></span></span>!</div>
-                <div class="text lt70">Várja meg az <br>operátor visszahívását a részletek <br>tisztázására</div>
-                <div class="text lt71">Kockázat nélkül!<br>Vedd át a csomagot, <br>és fizess <br>postán</div>
-                <div class="title lt72">Megrendeléseket fogadunk el egész <br><span class="pink">Európában</span></div>
+                <div class="text lt69">Egy <br>azonnali megrendelÃ©st <br>rendelhet egy egyedi <br>Ã¡ron <span class="price_main"><span class="price_main_value new_price_val"><x-newprice>11900</x-newprice></span><span class="price_main_currency new_price_cur"><x-currency>Ft</x-currency></span></span>!</div>
+                <div class="text lt70">VÃ¡rja meg az <br>operÃ¡tor visszahÃ­vÃ¡sÃ¡t a rÃ©szletek <br>tisztÃ¡zÃ¡sÃ¡ra</div>
+                <div class="text lt71">KockÃ¡zat nÃ©lkÃ¼l!<br>Vedd Ã¡t a csomagot, <br>Ã©s fizess <br>postÃ¡n</div>
+                <div class="title lt72">MegrendelÃ©seket fogadunk el egÃ©sz <br><span class="pink">EurÃ³pÃ¡ban</span></div>
             </div>
         </div>
         <div class="block12">
             <div class="wrapper">
-                <div class="title lt4">A REDUSLIM. Kapszula 2 héten belül feloldja akár <span class="pink">10 kg </span>zsírt</div>
-                <div class="title2 lt5">Mentse magát az elhízástól és csökkenti a szívroham, a cukorbetegség és a magas vérnyomás kockázatát 89% -kal</div>
+                <div class="title lt4">A REDUSLIM. Kapszula 2 hÃ©ten belÃ¼l feloldja akÃ¡r <span class="pink">10 kg </span>zsÃ­rt</div>
+                <div class="title2 lt5">Mentse magÃ¡t az elhÃ­zÃ¡stÃ³l Ã©s csÃ¶kkenti a szÃ­vroham, a cukorbetegsÃ©g Ã©s a magas vÃ©rnyomÃ¡s kockÃ¡zatÃ¡t 89% -kal</div>
                 <div class="left-block">
-                    <div class="item lt6">Hatékonyan felosztja a ZSÍR az <br>REDUSLIM alfa-gyümölcssavaknak köszönhetően</div>
-                    <div class="item lt7">Csökkenti a cukorbetegség, <br>magas vérnyomás, infarktus kialakulásának kockázatát</div>
-                    <div class="item lt8">Megakadájoza a <br>veszélyes az életre <br>belső szervek elhízást</div>
-                    <div class="bottom lt9">*Elnyomja az étvágyat</div>
+                    <div class="item lt6">HatÃ©konyan felosztja a ZSÃR az <br>REDUSLIM alfa-gyÃ¼mÃ¶lcssavaknak kÃ¶szÃ¶nhetÅ‘en</div>
+                    <div class="item lt7">CsÃ¶kkenti a cukorbetegsÃ©g, <br>magas vÃ©rnyomÃ¡s, infarktus kialakulÃ¡sÃ¡nak kockÃ¡zatÃ¡t</div>
+                    <div class="item lt8">MegakadÃ¡joza a <br>veszÃ©lyes az Ã©letre <br>belsÅ‘ szervek elhÃ­zÃ¡st</div>
+                    <div class="bottom lt9">*Elnyomja az Ã©tvÃ¡gyat</div>
                     <div class="prod"><img alt="" src="images/product.png"></div>
                 </div>
                 <div class="right-block" id="order">
-                    <div class="title-form lt10">AKCIÓ! <span class="pink"><span class="price_main"><span class="price_main_value new_price_val"><x-newprice>11900</x-newprice></span><span class="price_main_currency new_price_cur"><x-currency>Ft</x-currency></span></span> <span class="price_old"><span class="price_main_value old_price_val"><x-oldprice>23800</x-oldprice></span>
+                    <div class="title-form lt10">AKCIÃ“! <span class="pink"><span class="price_main"><span class="price_main_value new_price_val"><x-newprice>11900</x-newprice></span><span class="price_main_currency new_price_cur"><x-currency>Ft</x-currency></span></span> <span class="price_old"><span class="price_main_value old_price_val"><x-oldprice>23800</x-oldprice></span>
                         <span class="price_main_currency old_price_cur"><x-currency>Ft</x-currency></span>
                         </span>
                         </span>
                     </div>
-                    <div class="desc-form lt11">Az akció végéig maradt:</div>
+                    <div class="desc-form lt11">Az akciÃ³ vÃ©gÃ©ig maradt:</div>
                     <div class="timer-block" id="timer2">
                         <div class="hours">00</div>
                         <div class="minutes">40</div>
@@ -322,12 +322,12 @@
                            
     <select name="offer" class="form-control country_chang" style="display: none;">
         <option data-country-code="HU" selected="selected" value="13981">
-            Венгрия        </option>
+            Ð’ÐµÐ½Ð³Ñ€Ð¸Ñ        </option>
     </select>
 
      
                         <div class="line name-inp">
-                            <input name="name" placeholder="Név" type="text">
+                            <input name="name" placeholder="NÃ©v" type="text">
                         </div>
                         <div class="line phone-inp">
                             <input name="phone" placeholder="Telefon" type="tel">
@@ -345,9 +345,9 @@
       <input type="hidden" name="sid1" value="alex">
       <input type="hidden" name="sid2" value="alex2">
       <input type="hidden" name="sid3" value="alex3">
-      <input type="hidden" name="redirect_url" value="https://amazinghealth.github.io/germitox-ita/success/index.html">
+      <input type="hidden" name="redirect_url" value="https://reduslim-europe.github.io/hu/success/index.html">
                     </form>
-                    <div class="left-text lt12">Maradt<br>akciós<br>termék:</div>
+                    <div class="left-text lt12">Maradt<br>akciÃ³s<br>termÃ©k:</div>
                     <div class="right-text">
                         <div class="big">9</div>
                         <div class="small lt13">darab</div>
